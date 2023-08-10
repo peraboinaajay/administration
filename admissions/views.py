@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from admissions.models import School
 
 
 # Create your views here.
@@ -8,13 +8,15 @@ def homepage(request):
     return render(request,"index.html")
 
 def addadmission(request):
-    return render(request,'admissions/new-admission.html')
+    ajay=School.objects.all();
+    student={'allstudents':ajay}
+    return render(request,'admissions/admission-reports.html',student);
 
  
 
 
 
 def admissionreport(request):
-    value={"name":"all","mail":"ajay@mail"}
-    return render(request,'admissions/admission-reports.html',value)
+    
+    return render(request,'admissions/new-admission.html',);
 

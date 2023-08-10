@@ -19,6 +19,19 @@
         <a href="#admission">Admission</a>
         <a href="#contact">Contact</a>
     </nav>
+    <h1>all students</h1>
+   <table border="4">
+    <tr><th>NAME</th><th>LOCATIONS</th></tr>
+
+    {% for s in allstudents %}
+    <tr><td>{{s.name}}</td><td>{{s.location}}</td></tr> 
+    
+    {% endfor %}
+    </table>
+
+
+
+
     <section>
         <h2 tyle="color:s aquamarine;">Admission Report Summary</h2>
         <img src="{% static "images/WIN_20230616_14_35_46_Pro.jpg" %}" width="100" height="100" alt="image not found"/>
