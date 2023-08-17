@@ -25,7 +25,7 @@ urlpatterns = [
 
     path('ad/', include('admissions.urls')),
     path('fin/', include('finance.urls')),
-    
+   
     
 
 ]

@@ -3,6 +3,6 @@ from admissions import views
 urlpatterns = [
     path('adm/', views.addadmission),
     path('newadm/',views.admissionreport),
-    
+    path('vendor/',views.addvendor),
 
 ]
