@@ -22,9 +22,11 @@ from admissions import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.homepage),
+    path('userlogout', views.logouted),
 
     path('ad/', include('admissions.urls')),
     path('fin/', include('finance.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
    
     
 

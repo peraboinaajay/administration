@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>hello</title>
+        <link rel="stylesheet" href="{% static "stylesheets/style.css" %}"/>
+
+        
+    </head>
+    <body>
+       <h1>hello this the  update</h1>
+      
+       <form method="POST">
+
+        
+        <table>{{ form.as_table}}</table> 
+        <button type="submit" value="confirm">confirm</button>
+        {% csrf_token %}
+        
+        
+       
+       </form>
+       <a href="/ad/teacher"> <button type="submit" value="cancel">cancel</button></a>
+       {% csrf_token %}
+    </body>
+</html>

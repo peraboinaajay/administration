@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>hello</title>
+        <link rel="stylesheet" href="{% static "stylesheets/style.css" %}"/>
+
+        
+    </head>
+    <body>
+       <h1>hello this the  update</h1>
+      
+       <form method="POST">
+
+        
+        <table>{{ form.as_table}}</table> 
+        <input type="submit" value="update student">
+        <button type="submit">update</button>
+        {% csrf_token %}
+        
+       
+       </form>
+       
+    </body>
+</html>

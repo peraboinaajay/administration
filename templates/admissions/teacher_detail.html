@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teachers report page</title>
+    
+    
+    <link rel="stylesheet" href="{% static "stylesheets/style.css" %}"/>
+</head>
+<body>
+    <header>
+        <h1>Admission Report</h1>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#courses">Courses</a>
+        <a href="#admission">Admission</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    
+    <section>
+        <h2 tyle="color:s aquamarine;">TECHERS REPORT</h2>
+        
+        <table border="2">
+            
+            <tr><th>id</th>
+                <th>Teacher Name</th>
+                <th>experience</th>
+                <th>suject</th>
+                <th>contact</th>
+            </tr>
+            
+            <tr>
+                <td>{{teacher.id}}</td>
+                <td>{{teacher.name}}</td>
+                <td>{{teacher.exp}}</td>
+                <td>{{teacher.subject}}</td>
+                <td>{{teacher.contact}}</td>
+            </tr>
+            {% csrf_token %}
+            
+            <!-- Add more rows for other admission applicants -->
+        </table>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>
+            If you have any questions or need assistance, feel free to contact us at:
+        </p>
+
+    </section>
+    <footer>
+        <p>&copy; 2023 University. All rights reserved.</p>
+    </footer>
+</body>
+</html>
