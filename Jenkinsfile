@@ -19,7 +19,7 @@ pipeline {
     }
     stage('Push') {
       steps {
-        sh 'docker push ajayperaboina/jenkins-docker-hub'
+        sh 'docker push ajayperaboina/django-docker-hub'
       }
     }
     // stage('Deploy') {
